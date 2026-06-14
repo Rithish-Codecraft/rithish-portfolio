@@ -235,24 +235,73 @@
         /* Print Media Styles */
         @media print {
             body {
-                background: #ffffff;
-                padding: 0;
+                background: #ffffff !important;
+                padding: 0 !important;
+                margin: 0 !important;
             }
 
             .resume-page-container {
-                border: none;
-                box-shadow: none;
-                padding: 0;
-                max-width: 100%;
+                border: none !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
             }
 
             .print-btn-container {
-                display: none;
+                display: none !important;
+            }
+
+            /* Force 2-column layout in print */
+            .resume-grid {
+                display: grid !important;
+                grid-template-columns: 270px 1fr !important;
+                gap: 24px !important;
+            }
+
+            .resume-left-col {
+                border-right: 2px solid #111111 !important;
+                padding-right: 16px !important;
+                border-bottom: none !important;
+                padding-bottom: 0 !important;
+            }
+
+            .resume-header {
+                grid-template-columns: 130px 1fr 110px !important;
+                text-align: left !important;
+                gap: 24px !important;
+            }
+
+            /* Optimize margins and line heights to fit exactly 1 page */
+            .resume-section {
+                margin-bottom: 14px !important;
+            }
+            
+            .resume-section-title {
+                margin-bottom: 8px !important;
+            }
+            
+            .project-item {
+                margin-bottom: 8px !important;
+            }
+            
+            .skill-group {
+                margin-bottom: 8px !important;
+            }
+
+            .resume-name {
+                font-size: 2.4rem !important;
+            }
+
+            .resume-title {
+                font-size: 1.2rem !important;
+                margin-bottom: 8px !important;
             }
         }
 
-        /* Responsive Layout */
-        @media (max-width: 768px) {
+        /* Responsive Layout - Only on screens */
+        @media screen and (max-width: 768px) {
             .resume-header {
                 grid-template-columns: 1fr;
                 text-align: center;
