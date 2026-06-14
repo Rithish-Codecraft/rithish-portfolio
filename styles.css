@@ -83,7 +83,10 @@ body {
 }
 
 .logo {
-    font-size: 1.7rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.5rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: -0.02em;
@@ -92,6 +95,14 @@ body {
     padding: 4px 12px;
     background: var(--bg-surface);
     box-shadow: 3px 3px 0px var(--border-color);
+}
+
+.logo-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    object-fit: cover;
 }
 
 .nav-links {
