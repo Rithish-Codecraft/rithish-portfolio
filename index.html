@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Rithish - AI Engineer and Innovator. Specializing in Deep Learning, Research Intelligence Systems, and Workflow Automation.">
+    <title>Rithish | AI Engineer & Innovator</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Interactive Canvas Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="gradient-text">&lt;Rithish.ai&gt;</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#about" class="nav-item">About</a>
+                <a href="#skills" class="nav-item">Skills</a>
+                <a href="#projects" class="nav-item">Projects</a>
+                <a href="#vision" class="nav-item">Vision</a>
+                <a href="https://github.com/Rithish-Codecraft" target="_blank" class="nav-item nav-icon" aria-label="GitHub"><i data-lucide="github"></i></a>
+                <a href="https://www.linkedin.com/in/rithish-ceo-10001-feenixs/" target="_blank" class="nav-item nav-icon" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                <a href="#contact" class="nav-item btn-primary-outline">Get in Touch</a>
+            </nav>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge animate-fade-in">
+                    <span class="pulse-dot"></span> Available for Deep Tech Collaboration
+                </div>
+                <h1 class="hero-title animate-slide-up">
+                    Hi, I'm <span class="gradient-text">Rithish</span> <span class="wave">👋</span>
+                </h1>
+                <h2 class="hero-subtitle animate-slide-up">
+                    AI Engineer • Innovator
+                </h2>
+                <p class="hero-description animate-slide-up">
+                    Building next-generation intelligent systems, RAG-powered research platforms, and complex automation workflows. Bridging the gap between cutting-edge Artificial Intelligence and real-world execution.
+                </p>
+                <div class="hero-tags animate-slide-up">
+                    <span>AI & ML</span>
+                    <span>Research Systems</span>
+                    <span>Automation</span>
+                    <span>Deep Tech</span>
+                </div>
+                <div class="hero-actions animate-slide-up">
+                    <a href="#projects" class="btn-primary">Explore Projects <i data-lucide="arrow-right"></i></a>
+                    <a href="#contact" class="btn-secondary">Contact Info</a>
+                </div>
+                <div class="social-links animate-slide-up">
+                    <a href="https://github.com/Rithish-Codecraft" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    <a href="https://www.linkedin.com/in/rithish-ceo-10001-feenixs/" target="_blank" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="mailto:rithish.codecraft@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual animate-zoom-in">
+                <div class="image-wrapper">
+                    <div class="gradient-glow"></div>
+                    <img src="assets/profile.png" alt="Rithish - AI Engineer & Innovator" class="profile-img">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="mouse-icon">
+                <span class="wheel"></span>
+            </span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">The Mind Behind the <span class="gradient-text">Innovation</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text-card glass-panel">
+                    <h3>Professional Summary</h3>
+                    <p>
+                        AI & Data Science student with hands-on experience building AI-powered applications, research intelligence platforms, and workflow automation systems. Skilled in leveraging modern AI development tools and APIs to rapidly prototype and deploy functional solutions. Experienced with Python, automation platforms, AI workflows, prompt engineering, and end-to-end application development. Passionate about transforming ideas into scalable products in fast-paced startup environments.
+                    </p>
+                </div>
+                <div class="about-stats-grid">
+                    <div class="stat-card glass-panel">
+                        <div class="stat-icon"><i data-lucide="graduation-cap"></i></div>
+                        <div class="stat-info">
+                            <h4>Education</h4>
+                            <p>B.Tech AI & Data Science</p>
+                            <span class="sub-text">NPR College of Engineering & Tech</span>
+                        </div>
+                    </div>
+                    <div class="stat-card glass-panel">
+                        <div class="stat-icon"><i data-lucide="map-pin"></i></div>
+                        <div class="stat-info">
+                            <h4>Location</h4>
+                            <p>Tamil Nadu, India</p>
+                            <span class="sub-text">Open to remote & global roles</span>
+                        </div>
+                    </div>
+                    <div class="stat-card glass-panel">
+                        <div class="stat-icon"><i data-lucide="languages"></i></div>
+                        <div class="stat-info">
+                            <h4>Languages</h4>
+                            <p>Tamil, English</p>
+                            <span class="sub-text">Bilingual Proficiency</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section section-padding" id="skills">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+                <p class="section-subtitle">A curated summary of tools, frameworks, and domains I specialize in.</p>
+            </div>
+            <!-- Skills Grid Container -->
+            <div class="skills-grid-all">
+                <!-- 1. AI & LLM Tools -->
+                <div class="skill-card-neo">
+                    <h3><i data-lucide="brain"></i> AI & LLM Tools</h3>
+                    <div class="skill-list-neo">
+                        <span class="skill-item-neo">ChatGPT</span>
+                        <span class="skill-item-neo">Google Gemini</span>
+                        <span class="skill-item-neo">Mistral AI</span>
+                        <span class="skill-item-neo">Hugging Face</span>
+                        <span class="skill-item-neo">LangChain</span>
+                        <span class="skill-item-neo">Sentence Transformers</span>
+                    </div>
+                </div>
+
+                <!-- 2. AI Development Tools -->
+                <div class="skill-card-neo">
+                    <h3><i data-lucide="sparkles"></i> AI Dev Tools</h3>
+                    <div class="skill-list-neo">
+                        <span class="skill-item-neo">Cursor</span>
+                        <span class="skill-item-neo">GitHub Copilot</span>
+                        <span class="skill-item-neo">VS Code</span>
+                    </div>
+                </div>
+
+                <!-- 3. Programming Languages -->
+                <div class="skill-card-neo">
+                    <h3><i data-lucide="code-2"></i> Languages</h3>
+                    <div class="skill-list-neo">
+                        <span class="skill-item-neo">Python</span>
+                        <span class="skill-item-neo">JavaScript</span>
+                        <span class="skill-item-neo">SQL</span>
+                        <span class="skill-item-neo">HTML</span>
+                        <span class="skill-item-neo">CSS</span>
+                    </div>
+                </div>
+
+                <!-- 4. Frontend Development -->
+                <div class="skill-card-neo">
+                    <h3><i data-lucide="monitor"></i> Frontend Dev</h3>
+                    <div class="skill-list-neo">
+                        <span class="skill-item-neo">React.js</span>
+                        <span class="skill-item-neo">Streamlit</span>
+                    </div>
+                </div>
+
+                <!-- 5. Backend Development -->
+                <div class="skill-card-neo">
+                    <h3><i data-lucide="server"></i> Backend Dev</h3>
+                    <div class="skill-list-neo">
+                        <span class="skill-item-neo">FastAPI</span>
+                        <span class="skill-item-neo">Flask</span>
+                        <span class="skill-item-neo">Node.js</span>
+                        <span class="skill-item-neo">REST APIs</span>
+                    </div>
+                </div>
+
+                <!-- 6. Databases & Vector Databases -->
+                <div class="skill-card-neo">
+                    <h3><i data-lucide="database"></i> Databases & Vector DBs</h3>
+                    <div class="skill-list-neo">
+                        <span class="skill-item-neo">MySQL</span>
+                        <span class="skill-item-neo">PostgreSQL</span>
+                        <span class="skill-item-neo">SQLite</span>
+                        <span class="skill-item-neo">ChromaDB</span>
+                    </div>
+                </div>
+
+                <!-- 7. Automation & RPA -->
+                <div class="skill-card-neo">
+                    <h3><i data-lucide="cpu"></i> Automation & RPA</h3>
+                    <div class="skill-list-neo">
+                        <span class="skill-item-neo">n8n</span>
+                        <span class="skill-item-neo">UiPath</span>
+                        <span class="skill-item-neo">OCR Automation</span>
+                        <span class="skill-item-neo">Workflow Automation</span>
+                        <span class="skill-item-neo">Process Automation</span>
+                        <span class="skill-item-neo">Data Extraction</span>
+                    </div>
+                </div>
+
+                <!-- 8. Version Control -->
+                <div class="skill-card-neo">
+                    <h3><i data-lucide="git-branch"></i> Version Control</h3>
+                    <div class="skill-list-neo">
+                        <span class="skill-item-neo">Git</span>
+                        <span class="skill-item-neo">GitHub</span>
+                    </div>
+                </div>
+
+                <!-- 9. DevOps & Infrastructure -->
+                <div class="skill-card-neo">
+                    <h3><i data-lucide="terminal"></i> DevOps & Infra</h3>
+                    <div class="skill-list-neo">
+                        <span class="skill-item-neo">Docker</span>
+                        <span class="skill-item-neo">WSL</span>
+                        <span class="skill-item-neo">Hyper-V</span>
+                        <span class="skill-item-neo">Linux</span>
+                        <span class="skill-item-neo">Windows</span>
+                    </div>
+                </div>
+
+                <!-- 10. Data Science & Analytics -->
+                <div class="skill-card-neo">
+                    <h3><i data-lucide="bar-chart-2"></i> Data Science</h3>
+                    <div class="skill-list-neo">
+                        <span class="skill-item-neo">Pandas</span>
+                        <span class="skill-item-neo">NumPy</span>
+                        <span class="skill-item-neo">Data Visualization</span>
+                        <span class="skill-item-neo">Data Processing</span>
+                    </div>
+                </div>
+
+                <!-- 11. Research & Knowledge Systems -->
+                <div class="skill-card-neo">
+                    <h3><i data-lucide="book-open"></i> Research & RAG</h3>
+                    <div class="skill-list-neo">
+                        <span class="skill-item-neo">RAG</span>
+                        <span class="skill-item-neo">Semantic Search</span>
+                        <span class="skill-item-neo">Vector Search</span>
+                        <span class="skill-item-neo">Citation-Aware QA</span>
+                        <span class="skill-item-neo">Knowledge Base</span>
+                        <span class="skill-item-neo">Paper Analysis</span>
+                    </div>
+                </div>
+
+                <!-- 12. APIs & Integrations -->
+                <div class="skill-card-neo">
+                    <h3><i data-lucide="link"></i> APIs & Integrations</h3>
+                    <div class="skill-list-neo">
+                        <span class="skill-item-neo">OpenAI API</span>
+                        <span class="skill-item-neo">Gemini API</span>
+                        <span class="skill-item-neo">Google Drive API</span>
+                        <span class="skill-item-neo">Google Sheets API</span>
+                        <span class="skill-item-neo">REST Integration</span>
+                        <span class="skill-item-neo">JSON Processing</span>
+                    </div>
+                </div>
+
+                <!-- 13. Productivity & Collaboration -->
+                <div class="skill-card-neo">
+                    <h3><i data-lucide="briefcase"></i> Productivity</h3>
+                    <div class="skill-list-neo">
+                        <span class="skill-item-neo">Microsoft Office</span>
+                        <span class="skill-item-neo">Google Docs</span>
+                        <span class="skill-item-neo">Google Sheets</span>
+                        <span class="skill-item-neo">Google Drive</span>
+                    </div>
+                </div>
+
+                <!-- 14. Areas of Expertise -->
+                <div class="skill-card-neo">
+                    <h3><i data-lucide="award"></i> Expertise</h3>
+                    <div class="skill-list-neo">
+                        <span class="skill-item-neo">Artificial Intelligence</span>
+                        <span class="skill-item-neo">Machine Learning</span>
+                        <span class="skill-item-neo">Prompt Engineering</span>
+                        <span class="skill-item-neo">Research Automation</span>
+                        <span class="skill-item-neo">Full-Stack AI Apps</span>
+                        <span class="skill-item-neo">IDP (Intelligent Doc Processing)</span>
+                        <span class="skill-item-neo">Workflow Automation</span>
+                        <span class="skill-item-neo">Rapid Prototyping</span>
+                        <span class="skill-item-neo">AI Product Development</span>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section-padding" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="section-subtitle">Real-world systems engineered for maximum efficiency, research intelligence, and automated operations.</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: ResearchGPT -->
+                <div class="project-card glass-panel">
+                    <div class="project-header">
+                        <div class="project-icon"><i data-lucide="book-open"></i></div>
+                        <h3 class="project-title">ResearchGPT</h3>
+                    </div>
+                    <p class="project-description">
+                        AI-powered research assistant for paper discovery, semantic search, citation-aware question answering, and knowledge extraction.
+                    </p>
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li><i data-lucide="check-circle-2"></i> Paper Discovery & Semantic Search</li>
+                            <li><i data-lucide="check-circle-2"></i> Citation-Aware Question Answering</li>
+                            <li><i data-lucide="check-circle-2"></i> Automated Knowledge Extraction & Synthesis</li>
+                        </ul>
+                    </div>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>Streamlit</span>
+                        <span>LangChain</span>
+                        <span>ChromaDB</span>
+                        <span>Gemini</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: AI Automation Workflows -->
+                <div class="project-card glass-panel">
+                    <div class="project-header">
+                        <div class="project-icon"><i data-lucide="cpu"></i></div>
+                        <h3 class="project-title">AI Automation Workflows</h3>
+                    </div>
+                    <p class="project-description">
+                        Built automated workflows using n8n integrating OCR, APIs, AI models, and cloud services to automate business processes.
+                    </p>
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li><i data-lucide="check-circle-2"></i> Multi-App API Integration & Webhooks</li>
+                            <li><i data-lucide="check-circle-2"></i> OCR Document Parsing & Data Structuring</li>
+                            <li><i data-lucide="check-circle-2"></i> AI Model Classification & Routing Agents</li>
+                        </ul>
+                    </div>
+                    <div class="project-tags">
+                        <span>n8n</span>
+                        <span>UiPath</span>
+                        <span>OCR Automation</span>
+                        <span>API Integration</span>
+                        <span>Python</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: Full-Stack AI Applications -->
+                <div class="project-card glass-panel">
+                    <div class="project-header">
+                        <div class="project-icon"><i data-lucide="layout"></i></div>
+                        <h3 class="project-title">Full-Stack AI Applications</h3>
+                    </div>
+                    <p class="project-description">
+                        Developed AI-enabled applications using Python, APIs, databases, and modern development tools for rapid prototyping and product validation.
+                    </p>
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li><i data-lucide="check-circle-2"></i> Rapid Product Prototyping & Validation</li>
+                            <li><i data-lucide="check-circle-2"></i> RESTful API Backend Architectures</li>
+                            <li><i data-lucide="check-circle-2"></i> Relational & Vector Database Ingestion</li>
+                        </ul>
+                    </div>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>ReactJS</span>
+                        <span>PostgreSQL</span>
+                        <span>ChromaDB</span>
+                        <span>Docker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Strengths & Vision Section -->
+    <section class="vision-section section-padding" id="vision">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Philosophy</span>
+                <h2 class="section-title">Career Vision & <span class="gradient-text">Key Strengths</span></h2>
+            </div>
+            
+            <div class="vision-grid">
+                <!-- Strengths -->
+                <div class="strengths-wrapper glass-panel">
+                    <h3>Key Strengths</h3>
+                    <div class="strengths-list">
+                        <div class="strength-item">
+                            <div class="strength-icon"><i data-lucide="lightbulb"></i></div>
+                            <div class="strength-content">
+                                <h4>First-Principles Thinking</h4>
+                                <p>Breaking complex tech challenges down to their fundamental truths to engineer original solutions.</p>
+                            </div>
+                        </div>
+                        <div class="strength-item">
+                            <div class="strength-icon"><i data-lucide="zap"></i></div>
+                            <div class="strength-content">
+                                <h4>Rapid Learning Curve</h4>
+                                <p>Deep diving into new programming paradigms, AI architectures, and infrastructure stacks within days.</p>
+                            </div>
+                        </div>
+                        <div class="strength-item">
+                            <div class="strength-icon"><i data-lucide="compass"></i></div>
+                            <div class="strength-content">
+                                <h4>Product & Architecture Vision</h4>
+                                <p>Designing software with scale, user experience, and long-term modular maintenance in mind.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="vision-card-wrap glass-panel gradient-border-glow">
+                    <div class="vision-header">
+                        <div class="vision-icon"><i data-lucide="orbit"></i></div>
+                        <h3>The Long-Term Quest</h3>
+                    </div>
+                    <p class="vision-statement">
+                        "Building state-of-the-art technologies in Artificial Intelligence and Machine Learning. My long-term objective is to create globally impactful deep-tech companies and contribute to the development of transformative technologies that shape the future."
+                    </p>
+                    <div class="vision-interests">
+                        <h4>Deep Tech Focus Areas:</h4>
+                        <div class="interest-chips">
+                            <span>Semiconductor Technology</span>
+                            <span>Advanced Computing Architectures</span>
+                            <span>Research Intelligence Systems</span>
+                            <span>Automation Systems</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section-padding" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Let's Connect</span>
+                <h2 class="section-title">Start a <span class="gradient-text">Conversation</span></h2>
+                <p class="section-subtitle">Reach out for collaborations, project consulting, or industry opportunities.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact info -->
+                <div class="contact-info-panel glass-panel">
+                    <h3>Contact Information</h3>
+                    <p class="contact-lead-text">Feel free to reach out via email, phone, or connect on my social handles.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
+                            <i data-lucide="mail"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <a href="mailto:rithish.codecraft@gmail.com">rithish.codecraft@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <i data-lucide="phone"></i>
+                            <div>
+                                <h5>Phone</h5>
+                                <a href="tel:+919952782010">+91 9952782010</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <i data-lucide="map-pin"></i>
+                            <div>
+                                <h5>Location</h5>
+                                <p>Tamil Nadu, India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-socials">
+                        <h4>Follow My Journey</h4>
+                        <div class="social-icons">
+                            <a href="https://github.com/Rithish-Codecraft" target="_blank" class="social-icon-btn"><i data-lucide="github"></i> GitHub</a>
+                            <a href="https://www.linkedin.com/in/rithish-ceo-10001-feenixs/" target="_blank" class="social-icon-btn"><i data-lucide="linkedin"></i> LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="contact-form-panel glass-panel">
+                    <h3>Send Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="form-name">Name</label>
+                            <input type="text" id="form-name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">Email Address</label>
+                            <input type="email" id="form-email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-subject">Subject</label>
+                            <input type="text" id="form-subject" placeholder="Collaboration / Job Opportunity" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">Message</label>
+                            <textarea id="form-message" rows="5" placeholder="Write your message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary full-width">Send Message <i data-lucide="send"></i></button>
+                    </form>
+                    <div id="form-feedback" class="form-feedback-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Rithish. Crafted with passion, code, and intelligence.</p>
+            <div class="footer-links">
+                <a href="#home">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
