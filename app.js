@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
-    // 3. Contact Form Verification & Mailto Redirection
+    // 3. Contact Form Verification & FormSubmit AJAX Delivery
     const contactForm = document.getElementById('contact-form');
     const formFeedback = document.getElementById('form-feedback');
 
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Simple micro-interaction: loading state
             submitBtn.disabled = true;
-            submitBtn.innerHTML = 'Preparing mail... <i data-lucide="loader-2" class="spin"></i>';
+            submitBtn.innerHTML = 'Sending message... <i data-lucide="loader-2" class="spin"></i>';
             lucide.createIcons();
 
             const name = document.getElementById('form-name').value;
@@ -88,29 +88,55 @@ document.addEventListener('DOMContentLoaded', () => {
             const subject = document.getElementById('form-subject').value;
             const message = document.getElementById('form-message').value;
 
-            // Simulate slight delay and construct mailto link
-            setTimeout(() => {
+            // Send via FormSubmit AJAX endpoint
+            fetch("https://formsubmit.co/ajax/rithish.codecraft@gmail.com", {
+                method: "POST",
+                headers: { 
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify({
+                    Name: name,
+                    Email: email,
+                    Subject: subject,
+                    Message: message
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalBtnHTML;
                 lucide.createIcons();
 
-                // Construct and trigger mailto link
-                const mailtoUrl = `mailto:rithish.codecraft@gmail.com?subject=${encodeURIComponent('Portfolio Inquiry: ' + subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message)}`;
-                window.location.href = mailtoUrl;
+                if (data.success === "true" || data.success === true) {
+                    formFeedback.className = 'form-feedback-message success';
+                    formFeedback.style.display = 'block';
+                    formFeedback.innerHTML = `Success! Your message was submitted. (Note: If this is the first submission, please click the link in the activation email sent to rithish.codecraft@gmail.com)`;
+                    contactForm.reset();
+                } else {
+                    formFeedback.className = 'form-feedback-message error';
+                    formFeedback.style.display = 'block';
+                    formFeedback.innerHTML = `Error: ${data.message || 'Could not send message.'}`;
+                }
 
-                // Show success feedback
-                formFeedback.className = 'form-feedback-message success';
-                formFeedback.style.display = 'block';
-                formFeedback.innerHTML = `Mail client opened! Your message details have been prefilled for sending to rithish.codecraft@gmail.com.`;
-                
-                // Clear form inputs
-                contactForm.reset();
-
-                // Clear success message after 8 seconds
+                // Hide feedback after 10 seconds
                 setTimeout(() => {
                     formFeedback.style.display = 'none';
-                }, 8000);
-            }, 1000);
+                }, 10000);
+            })
+            .catch(error => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHTML;
+                lucide.createIcons();
+
+                formFeedback.className = 'form-feedback-message error';
+                formFeedback.style.display = 'block';
+                formFeedback.innerHTML = `An error occurred: ${error.message || 'Connection failed.'}`;
+
+                setTimeout(() => {
+                    formFeedback.style.display = 'none';
+                }, 10000);
+            });
         });
     }
 
